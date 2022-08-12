@@ -1,37 +1,64 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import {CardHeader} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardHeader, Typography } from "@mui/material";
+import { Star } from "@mui/icons-material";
 
-const BasicCard = () => {
+/**
+ * Outputs a card component
+ * @typedef {Object} ValueProps
+ * @property {String} itemName
+ * @property {String} itemAbbreviation
+ * @property {String} url
+ * @property {String} alt
+ *
+ * @typedef {Object} Props
+ * @property {Boolean} showIcon
+ * @property {String} headerTitle
+ * @property {String|Null} headerSubHeader
+ * @property {String} cardTitle
+ * @property {String} description
+ * @property {Array<ValueProps>} values
+ * @property {String} footerCta
+ * @property {Array<Number>|null} extraInfo
+ *
+ * */
+const CardWrapper = props => {
+  const {
+    showIcon,
+    headerTitle,
+    headerSubHeader,
+    cardTitle,
+    description,
+    values,
+    footerCta,
+    extraInfo
+  } = props;
+  
   return (
     <Card sx={{ minWidth: 275 }}>
-      <CardHeader></CardHeader>
+      <CardHeader
+        avatar={showIcon ? <Star sx={{ fill: "black" }} aria-label='stocks' /> : null}
+        title={headerTitle}
+        subheader={headerSubHeader !== null ? headerSubHeader : null}
+      />
+      
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
         <Typography variant="h5" component="div">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
+          {cardTitle}
         </Typography>
         <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          {description}
         </Typography>
+        <CardActions>
+          <Button
+            color='primary'
+            href="#"
+            fullWidth={true}
+            size="large"
+          >{footerCta}</Button>
+        </CardActions>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
 
-export default BasicCard;
+export default CardWrapper;

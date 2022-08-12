@@ -1,0 +1,159 @@
+{
+  "frontPageItems": [
+    {
+      "showIcon": true,
+      "headerTitle": "stock screen",
+      "cardTitle": "Dogs of the Dow Screen",
+      "description": "Indentifying contrarian plays among the Dow Jones industrial stocks.",
+      "value": [
+        {
+          "itemName": "3M Co",
+          "itemAbbreviation": "MMM",
+          "url": "#",
+          "alt": "MMM"
+        },
+        {
+          "itemName": "Amazon Inc",
+          "itemAbbreviation": "AMON",
+          "url": "#",
+          "alt": "AMON"
+        },
+        {
+          "itemName": "Chevron Corporation",
+          "itemAbbreviation": "CVX",
+          "url": "#",
+          "alt": "CVX"
+        },
+        {
+          "itemName": "Cisco Systems Inc",
+          "itemAbbreviation": "CSCO",
+          "url": "#",
+          "alt": "CSCO"
+        },
+        {
+          "itemName": "Dow Inc",
+          "itemAbbreviation": "DOW",
+          "url": "#",
+          "alt": "DOW"
+        }
+      ],
+      "footerCta": "See All 55 Stocks (as of 5/27)",
+      "extraInfo": [3.6,-2.3]
+    },
+    {
+      "showIcon": true,
+      "headerTitle": "Premium Stock Screen",
+      "cardTitle": "AAII Dividend Investing Portfolio",
+      "description": "The AAII Dividend Investing portfolio seeks income and growth from a diversified portfolio of domestic common stocks paying cash dividends",
+      "value": [
+        {
+          "itemName": "Peoples Bancorp Inc.",
+          "itemAbbreviation": "PEBO",
+          "url": "#",
+          "alt": "PEBO"
+        },
+        {
+          "itemName": "Amazon Inc",
+          "itemAbbreviation": "AMON",
+          "url": "#",
+          "alt": "AMON"
+        },
+        {
+          "itemName": "Chevron Corporation",
+          "itemAbbreviation": "CVX",
+          "url": "#",
+          "alt": "CVX"
+        },
+        {
+          "itemName": "Cisco Systems Inc",
+          "itemAbbreviation": "CSCO",
+          "url": "#",
+          "alt": "CSCO"
+        },
+        {
+          "itemName": "Dow Inc",
+          "itemAbbreviation": "DOW",
+          "url": "#",
+          "alt": "DOW"
+        }
+      ],
+      "footerCta": "See All 51 Stocks (as of 5/27)"
+    },
+    {
+      "headerTitle": "First Cut ETF Screen",
+      "cardTitle": "International Stock Winners",
+      "description": "ETFs with NAV returns in the top 50 percent of their category over the last one-, three-, and five-year periods, accompanied by an expense ratio below norm for their category and total assets above $25 million. Excludes leveraged funds and inverse funds.",
+      "value": [
+        {
+          "itemName": "Xtrackers Harvest CSI 300 China A ETF",
+          "itemAbbreviation": "ASHR",
+          "url": "#",
+          "alt": "ASHR"
+        },
+        {
+          "itemName": "Amazon Inc",
+          "itemAbbreviation": "AMON",
+          "url": "#",
+          "alt": "AMON"
+        },
+        {
+          "itemName": "Chevron Corporation",
+          "itemAbbreviation": "CVX",
+          "url": "#",
+          "alt": "CVX"
+        },
+        {
+          "itemName": "Cisco Systems Inc",
+          "itemAbbreviation": "CSCO",
+          "url": "#",
+          "alt": "CSCO"
+        },
+        {
+          "itemName": "Dow Inc",
+          "itemAbbreviation": "DOW",
+          "url": "#",
+          "alt": "DOW"
+        }
+      ],
+      "footerCta": "See all 38 ETFs (as of 4/30)"
+    },
+    {
+      "headerTitle": "first cut mutual fund screen",
+      "cardTitle": "Highest Yielding Short-Term Bond Funds",
+      "description": "The highest yielding no-load short-term bond funds. All passing funds are designated as being open to new individual investors.",
+      "value": [
+        {
+          "itemName": "American Century Short Duration Inv",
+          "itemAbbreviation": "ACSNX",
+          "url": "#",
+          "alt": "ACSNX"
+        },
+        {
+          "itemName": "Amazon Inc",
+          "itemAbbreviation": "AMON",
+          "url": "#",
+          "alt": "AMON"
+        },
+        {
+          "itemName": "Chevron Corporation",
+          "itemAbbreviation": "CVX",
+          "url": "#",
+          "alt": "CVX"
+        },
+        {
+          "itemName": "Cisco Systems Inc",
+          "itemAbbreviation": "CSCO",
+          "url": "#",
+          "alt": "CSCO"
+        },
+        {
+          "itemName": "Dow Inc",
+          "itemAbbreviation": "DOW",
+          "url": "#",
+          "alt": "DOW"
+        }
+      ],
+      "footerCta": "See All 28 Funds (as of 4/30)"
+    }
+  ]
+}
