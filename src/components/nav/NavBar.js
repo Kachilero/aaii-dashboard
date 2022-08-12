@@ -1,109 +1,147 @@
-import React, {useState} from "react";
-import {AppBar, Box, Toolbar, Typography, Button, IconButton, Container, MenuItem} from "@mui/material";
-import { Menu } from '@mui/icons-material'
+import React from "react";
+import { AppBar, Avatar, Box, Toolbar, Tooltip, Typography, Button, IconButton, Container,Menu, MenuItem} from "@mui/material";
+import { Adb, MenuOpen } from '@mui/icons-material'
 
 const pages = ['Home', 'About', 'Planning', 'AAII Journal', 'Market Portfolios',
 'Investing Ideas', 'Screening', 'Community', 'Education', 'A+ Investor'];
-const aboutMenuSettings = ['About Us', 'History'];
+const settings = ['About Us', 'History'];
 
 const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElAbout, setAnchorElAbout] = useState(null);
-  
-  const siteNameStyle = {
-    mr: 2,
-    display: { xs: 'none', md: 'flex' },
-    fontWeight: 700,
-    letterSpacing: '.3rem',
-    color: 'inherit',
-    textDecoration: 'none'
-  }
-  
-  const handleOpenNavMenu = event => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  }
-  
-  const handleOpenAboutMenu = event => {
-    setAnchorElAbout(event.currentTarget);
-  }
-  
-  const handleCloseNavMenu = () => setAnchorElNav(null);
-  const handleCloseAboutMenu = () => setAnchorElAbout(null);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
   
   return (
-    <AppBar position='static'>
-      <Container maxWidth='xl'>
+    <AppBar position="static">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Menu sx={{ display: { xs: 'none', md: 'flex'}, mr: 1}} />
           <Typography
-            variant='h6'
+            variant="h6"
             noWrap
-            component='a'
-            href='#'
-            sx={siteNameStyle}
-            >
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
             AAII
           </Typography>
-          
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size='large'
-              aria-label='menu button?'
-              aria-controls='menu-appbar'
-              aria-haspopup='true'
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color='inherit'
+              color="inherit"
             >
-              <Menu />
+              <MenuOpen />
             </IconButton>
             <Menu
-              id='menu-appbar'
+              id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left'
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left'
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(page => (
+              {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Menu sx={{ display: { xs: 'flex', md: 'none' }, mr: 1}} />
+          <Adb sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
-            variant='h5'
+            variant="h5"
             noWrap
-            component='a'
-            href=''
+            component="a"
+            href=""
             sx={{
-              ...siteNameStyle,
-              display: { xs: 'flex', md: 'none'}
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
             }}
-          >AAII</Typography>
+          >
+            LOGO
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(page => (
+            {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >{page}</Button>
+              >
+                {page}
+              </Button>
             ))}
           </Box>
-          
+
           <Box sx={{ flexGrow: 0 }}>
-          
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
           </Box>
         </Toolbar>
       </Container>
